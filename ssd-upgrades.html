@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSD Migration | MPC Consulting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --midnight: #0a192f;
+            --slate: #475569;
+            --cyan: #00f2ff;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--midnight);
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        .font-display {
+            font-family: 'Syncopate', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: var(--cyan);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 242, 255, 0.1);
+        }
+        .grain-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+            opacity: 0.05;
+            filter: contrast(150%) brightness(100%);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .btn-primary {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid var(--cyan);
+            color: var(--cyan);
+        }
+        .btn-primary:hover {
+            background: var(--cyan);
+            color: var(--midnight);
+            box-shadow: 0 0 20px var(--cyan);
+        }
+    </style>
+</head>
+<body>
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center glass backdrop-blur-md">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-cyan-400 rounded-sm rotate-45 flex items-center justify-center">
+                <div class="w-4 h-4 bg-midnight-900 rounded-full -rotate-45"></div>
+            </div>
+            <a href="index.html" class="font-display text-xl font-bold tracking-tighter text-white">MPC <span class="text-cyan-400">Consulting</span></a>
+        </div>
+        <a href="index.html" class="btn-primary px-5 py-2 text-xs font-bold uppercase tracking-widest rounded-sm">
+            Back to Home
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] flex items-center justify-center px-6 pt-24 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,242,255,0.1),transparent_70%)]"></div>
+        <div class="relative z-10 text-center max-w-4xl">
+            <h1 class="font-display text-4xl md:text-6xl font-bold text-white leading-tight mb-6 reveal">
+                HDD to <span class="text-cyan-400">SSD Migration</span>
+            </h1>
+            <p class="text-slate-400 text-lg font-light max-w-2xl mx-auto reveal" style="transition-delay: 200ms">
+                Stop waiting for your computer to think. We replace aging mechanical drives with ultra-fast flash storage, instantly reviving your system's performance.
+            </p>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-24 px-6 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Productivity -->
+                <div class="glass p-8 rounded-2xl reveal" style="transition-delay: 100ms">
+                    <div class="w-12 h-12 bg-cyan-500/20 border border-cyan-400/30 rounded-lg flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-white mb-4">Instant <br>Productivity</h3>
+                    <p class="text-slate-400 font-light text-sm leading-relaxed mb-6">
+                        Experience boot times that drop from minutes to seconds. Applications launch instantly, eliminating the "micro-waits" that kill your daily flow.
+                    </p>
+                    <ul class="text-[10px] text-slate-500 space-y-2 uppercase tracking-widest font-bold">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-cyan-400 rounded-full"></span> 10x Faster Boot</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-cyan-400 rounded-full"></span> Rapid App Launch</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-cyan-400 rounded-full"></span> Responsive OS</li>
+                    </ul>
+                </div>
+
+                <!-- Reliability -->
+                <div class="glass p-8 rounded-2xl reveal" style="transition-delay: 200ms">
+                    <div class="w-12 h-12 bg-cyan-500/20 border border-cyan-400/30 rounded-lg flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m0 0l-4-4M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3" />
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-white mb-4">Rock-Solid <br>Reliability</h3>
+                    <p class="text-slate-400 font-light text-sm leading-relaxed mb-6">
+                        Unlike mechanical HDDs, SSDs have no moving parts. This means no mechanical failure, silent operation, and extreme durability against accidental shocks.
+                    </p>
+                    <ul class="text-[10px] text-slate-500 space-y-2 uppercase tracking-widest font-bold">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-cyan-400 rounded-full"></span> No Moving Parts</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-cyan-400 rounded-full"></span> Zero Noise</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-cyan-400 rounded-full"></span> Shock Resistant</li>
+                    </ul>
+                </div>
+
+                <!-- Efficiency -->
+                <div class="glass p-8 rounded-2xl reveal" style="transition-delay: 300ms">
+                    <div class="w-12 h-12 bg-cyan-500/20 border border-cyan-400/30 rounded-lg flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-white mb-4">System <br>Longevity</h3>
+                    <p class="text-slate-400 font-light text-sm leading-relaxed mb-6">
+                        The most cost-effective way to avoid buying a new computer. We extend your hardware's lifecycle while improving battery efficiency and thermal output.
+                    </p>
+                    <ul class="text-[10px] text-slate-500 space-y-2 uppercase tracking-widest font-bold">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-cyan-400 rounded-full"></span> Extended Lifecycle</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-cyan-400 rounded-full"></span> Battery Efficiency</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-cyan-400 rounded-full"></span> ROI Optimization</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tailored Solutions -->
+    <section class="py-24 px-6 bg-slate-900/30 relative">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-display text-3xl font-bold text-white mb-4">Tailored <span class="text-cyan-400">Storage Solutions</span></h2>
+                <p class="text-slate-400 font-light max-w-2xl mx-auto">Every system is different. We analyze your specific usage patterns to recommend the ideal drive architecture.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="glass p-8 rounded-2xl reveal" style="transition-delay: 100ms">
+                    <h3 class="font-display text-xl font-bold text-white mb-4">SATA SSD <span class="text-cyan-400 text-sm font-normal block uppercase tracking-widest">Budget-Friendly Boost</span></h3>
+                    <p class="text-slate-400 font-light text-sm leading-relaxed mb-6">
+                        Perfect for general office work and home use. A massive leap over HDDs that fits every budget while providing the snappy feel of a modern OS.
+                    </p>
+                    <div class="flex items-center gap-2 text-xs text-slate-500 uppercase font-bold">
+                        <span class="w-2 h-2 bg-cyan-400 rounded-full"></span> Best for: General Productivity
+                    </div>
+                </div>
+
+                <div class="glass p-8 rounded-2xl reveal" style="transition-delay: 200ms">
+                    <h3 class="font-display text-xl font-bold text-white mb-4">NVMe M.2 <span class="text-cyan-400 text-sm font-normal block uppercase tracking-widest">Elite Performance</span></h3>
+                    <p class="text-slate-400 font-light text-sm leading-relaxed mb-6">
+                        For power users, creative professionals, and data analysts. Blazing fast read/write speeds for heavy applications and massive files.
+                    </p>
+                    <div class="flex items-center gap-2 text-xs text-slate-500 uppercase font-bold">
+                        <span class="w-2 h-2 bg-cyan-400 rounded-full"></span> Best for: Power Users & Creators
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 px-6 text-center relative">
+        <div class="max-w-2xl mx-auto reveal">
+            <h2 class="font-display text-2xl font-bold text-white mb-8">Ready to <span class="text-cyan-400">stop waiting?</span></h2>
+            <a href="index.html#contact" class="btn-primary px-8 py-4 text-sm font-bold uppercase tracking-widest rounded-sm inline-block">
+                Request SSD Audit
+            </a>
+        </div>
+    </section>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

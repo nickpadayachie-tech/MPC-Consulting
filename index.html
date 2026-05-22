@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-sCale=1.0">
+    <title>MPC Consulting | Professional Hardware & Software Optimization</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --midnight: #0a192f;
+            --slate: #475569;
+            --cyan: #00f2ff;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--midnight);
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        .font-display {
+            font-family: 'Syncopate', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: var(--cyan);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 242, 255, 0.1);
+        }
+        .grain-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+            opacity: 0.05;
+            filter: contrast(150%) brightness(100%);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(0, 242, 255, 0.15) 0%, transparent 70%);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .btn-primary {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid var(--cyan);
+            color: var(--cyan);
+        }
+        .btn-primary:hover {
+            background: var(--cyan);
+            color: var(--midnight);
+            box-shadow: 0 0 20px var(--cyan);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--cyan);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center glass backdrop-blur-md">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-cyan-400 rounded-sm rotate-45 flex items-center justify-center">
+                <div class="w-4 h-4 bg-midnight-900 rounded-full -rotate-45"></div>
+            </div>
+            <span class="font-display text-xl font-bold tracking-tighter text-white">MPC <span class="text-cyan-400">Consulting</span></span>
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest">
+            <a href="#services" class="nav-link hover:text-cyan-400 transition-colors">Services</a>
+            <a href="#about" class="nav-link hover:text-cyan-400 transition-colors">About</a>
+            <a href="#contact" class="nav-link hover:text-cyan-400 transition-colors">Contact</a>
+        </div>
+        <a href="#contact" class="btn-primary px-5 py-2 text-xs font-bold uppercase tracking-widest rounded-sm">
+            Free Audit
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 text-center max-w-4xl">
+            <h1 class="font-display text-4xl md:text-6xl font-bold text-white leading-tight mb-6 reveal" id="hero-title">
+                Accelerate Your <br><span class="text-cyan-400">Technology</span>
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light leading-relaxed reveal" style="transition-delay: 200ms">
+                Elite consulting for high-performance systems. We specialize in surgical hardware upgrades and precision software optimization to unlock the true potential of your machine—transforming your slow, sluggish PC into a super-fast system.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center reveal" style="transition-delay: 400ms">
+                <a href="#services" class="btn-primary px-8 py-4 text-sm font-bold uppercase tracking-widest rounded-sm">
+                    Explore Services
+                </a>
+                <a href="#contact" class="btn-primary px-8 py-4 text-sm font-bold uppercase tracking-widest rounded-sm">
+                    Book Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-white mb-4 reveal">System Optimization</h2>
+                <div class="w-20 h-1 bg-cyan-400 mx-auto reveal"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Software Upgrade -->
+                <a href="software-upgrades.html" class="glass p-10 rounded-2xl reveal block transition-all duration-300 hover:border-cyan-400 hover:translate-y-[-10px]" style="transition-delay: 100ms">
+                    <div class="w-14 h-14 bg-cyan-500/20 border border-cyan-400/30 rounded-xl flex items-center justify-center mb-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-white mb-4">Software <br>Upgrades</h3>
+                    <p class="text-slate-400 font-light leading-relaxed mb-6">
+                        Precision OS updates, aggressive performance tuning, and surgical driver optimization to eliminate latency.
+                    </p>
+                    <div class="flex items-center gap-2 text-cyan-400 text-xs uppercase tracking-widest font-bold">
+                        View All Services
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4-4 4M7 12h10" />
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- SSD Upgrade -->
+                <a href="ssd-upgrades.html" class="glass p-10 rounded-2xl reveal block transition-all duration-300 hover:border-cyan-400 hover:translate-y-[-10px]" style="transition-delay: 200ms">
+                    <div class="w-14 h-14 bg-cyan-500/20 border border-cyan-400/30 rounded-xl flex items-center justify-center mb-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-white mb-4">HDD to <br>SSD Migration</h3>
+                    <p class="text-slate-400 font-light leading-relaxed mb-6">
+                        Replace aging mechanical platters with NVMe technology. Experience 10x faster boot times and instantaneous application launches.
+                    </p>
+                    <div class="flex items-center gap-2 text-cyan-400 text-xs uppercase tracking-widest font-bold">
+                        View All Options
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4-4 4M7 12h10" />
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- RAM Upgrade -->
+                <a href="ram-upgrades.html" class="glass p-10 rounded-2xl reveal block transition-all duration-300 hover:border-cyan-400 hover:translate-y-[-10px]" style="transition-delay: 300ms">
+                    <div class="w-14 h-14 bg-cyan-500/20 border border-cyan-400/30 rounded-xl flex items-center justify-center mb-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10m0-10l4-4m-4 4l4 4m-4-4h12a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2v-6a2 2 0 012-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-white mb-4">RAM <br>Expansion</h3>
+                    <p class="text-slate-400 font-light leading-relaxed mb-6">
+                        Eliminate bottlenecks. We identify the optimal memory configuration to handle heavy multitasking and creative suites.
+                    </p>
+                    <div class="flex items-center gap-2 text-cyan-400 text-xs uppercase tracking-widest font-bold">
+                        View RAM Plans
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4-4 4M7 12h10" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 bg-slate-900/30 relative">
+        <div class="max-w-4xl mx-auto text-center space-y-12">
+            <div class="reveal">
+                <h2 class="font-display text-3xl font-bold text-white mb-6">Hardware <br><span class="text-cyan-400">Engineering</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <!-- HDD Video -->
+                    <div class="relative group">
+                        <div class="absolute -top-4 -left-4 px-3 py-1 bg-cyan-900/50 text-cyan-400 text-[10px] uppercase tracking-widest font-bold rounded-sm border border-cyan-400/30 z-20">Legacy HDD</div>
+                        <div class="relative z-10 glass p-4 rounded-2xl overflow-hidden">
+                            <video autoplay muted loop playsinline preload="auto" class="rounded-xl opacity-80 group-hover:opacity-100 transition-opacity duration-500 w-full h-full object-cover">
+                                <source src="https://d2ol7oe51mr4n9.cloudfront.net/user_3DiuVqH1MERGMmc1VbVcypMLFRm/6a5220a2-0c98-48eb-b849-a466d0c6dd93.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <!-- SSD Image -->
+                    <div class="relative group">
+                        <div class="absolute -top-4 -right-4 px-3 py-1 bg-cyan-900/50 text-cyan-400 text-[10px] uppercase tracking-widest font-bold rounded-sm border border-cyan-400/30 z-20">Modern NVMe SSD</div>
+                        <div class="relative z-10 glass p-4 rounded-2xl overflow-hidden">
+                            <img src="https://d2ol7oe51mr4n9.cloudfront.net/user_3DiuVqH1MERGMmc1VbVcypMLFRm/9215f2fc-cc15-4118-9c39-cd27ba7d5d95.png" alt="SSD Hardware Engineering" class="rounded-xl opacity-80 group-hover:opacity-100 transition-opacity duration-500 w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reveal mt-12">
+                <div id="ssd-animation-container" class="w-full h-[600px] rounded-3xl overflow-hidden glass border border-cyan-400/20 relative">
+                </div>
+            </div>
+            <div class="reveal" style="transition-delay: 200ms">
+                <p class="text-slate-400 font-light leading-relaxed mb-6 max-w-3xl mx-auto">
+                    We don't just swap parts; we optimize workflows. With years of experience in enterprise-level system architecture, MPC Consulting brings a surgical approach to personal and professional hardware and software consulting.
+                </p>
+                <p class="text-slate-400 font-light leading-relaxed mb-8 max-w-3xl mx-auto">
+                    Our commitment is simple: Maximum performance, absolute stability, and transparent pricing. We treat every system as a high-performance asset.
+                </p>
+                <div class="flex justify-center gap-6">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-white font-display">100%</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-widest">Success Rate</div>
+                    </div>
+                    <div class="w-px h-10 bg-slate-700"></div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-white font-display">10x</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-widest">Speed Boost</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 relative">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-white mb-4 reveal">Get Your <span class="text-cyan-400">Free Audit</span></h2>
+                <p class="text-slate-400 font-light reveal">Ready to unlock your system's potential? Let's analyze your current setup.</p>
+            </div>
+
+            <div class="glass p-8 md:p-12 rounded-3xl reveal">
+                <form action="https://formspree.io/f/mlgzqjog" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="text-xs uppercase tracking-widest text-slate-500 font-bold ml-1">Full Name</label>
+                        <input type="text" name="name" required placeholder="John Doe" class="w-full bg-white/5 border border-white/10 px-4 py-3 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs uppercase tracking-widest text-slate-500 font-bold ml-1">Email Address</label>
+                        <input type="email" name="email" required placeholder="john@example.com" class="w-full bg-white/5 border border-white/10 px-4 py-3 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors">
+                    </div>
+                    <div class="md:col-span-2 space-y-2">
+                        <label class="text-xs uppercase tracking-widest text-slate-500 font-bold ml-1">Current System Specs</label>
+                        <textarea name="specs" rows="4" placeholder="e.g. Core i5 8th Gen, 8GB RAM, 1TB HDD..." class="w-full bg-white/5 border border-white/10 px-4 py-3 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"></textarea>
+                    </div>
+                    <div class="md:col-span-2 pt-4">
+                        <button type="submit" class="w-full btn-primary py-4 font-bold uppercase tracking-widest rounded-lg transition-all">
+                            Request Optimization Audit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 bg-cyan-400 rounded-sm rotate-45 flex items-center justify-center">
+                    <div class="w-3 h-3 bg-midnight-900 rounded-full -rotate-45"></div>
+                </div>
+                <span class="font-display text-lg font-bold tracking-tighter text-white">MPC <span class="text-cyan-400">Consulting</span></span>
+            </div>
+            <div class="text-slate-500 text-xs font-medium uppercase tracking-widest">
+                &copy; 2026 MPC Consulting. All rights reserved.
+            </div>
+            <div class="flex gap-6 text-slate-400">
+                <a href="#" class="hover:text-cyan-400 transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-6.054-1.591-8.564-7.166-8.564-3.425 0-6.138 2.072-6.584 5.403-1.213-.154-2.453-.345-3.644-.523-1.042.848-1.644 2.045-1.644 3.411 0 1.204.535 2.308 1.404 3.066-1.01 0-1.955-.31-2.827-.775-.543.72-.144 1.77.543 2.245 1.043.587 2.16.83 3.311.83 2.323 0 4.22-1.633 4.22-3.633 0-.31-.036-.613-.105-.906.853.136 1.73.24 2.63.24 3.345 0 6.25-2.722 6.25-6.053 0-.587-.136-1.152-.38-1.685z"/></svg></a>
+                <a href="#" class="hover:text-cyan-400 transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.1B16.5 13h-3v7l-1.212-1.212c-1.12.33-2.27.53-3.44.53-3.505 0-4.5-2.31-4.5-4.88 0-2.27 1.63-3.64 3.87-4.13V2.163z"/></svg></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+        const container = document.getElementById('ssd-animation-container');
+        if (container) {
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+
+            const scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x0a192f);
+
+            const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
+            camera.position.set(0, 4, 8);
+
+            const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            renderer.setSize(width, height);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            renderer.shadowMap.enabled = true;
+            renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+            renderer.toneMapping = THREE.ACESFilmicToneMapping;
+            renderer.toneMappingExposure = 1.2;
+            container.appendChild(renderer.domElement);
+
+            const controls = new OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.05;
+            controls.minDistance = 4;
+            controls.maxDistance = 15;
+            controls.autoRotate = false;
+
+            const ambientLight = new THREE.AmbientLight(0x404060, 0.5);
+            scene.add(ambientLight);
+
+            const mainLight = new THREE.DirectionalLight(0xffffff, 1.5);
+            mainLight.position.set(5, 8, 5);
+            mainLight.castShadow = true;
+            mainLight.shadow.mapSize.set(2048, 2048);
+            mainLight.shadow.camera.far = 25;
+            scene.add(mainLight);
+
+            const fillLight = new THREE.DirectionalLight(0x4488ff, 0.4);
+            fillLight.position.set(-5, 3, -3);
+            scene.add(fillLight);
+
+            const rimLight = new THREE.DirectionalLight(0xff6644, 0.3);
+            rimLight.position.set(0, -2, -5);
+            scene.add(rimLight);
+
+            const groundGeo = new THREE.PlaneGeometry(20, 20);
+            const groundMat = new THREE.MeshStandardMaterial({ color: 0x0a192f, roughness: 0.8, metalness: 0.2 });
+            const ground = new THREE.Mesh(groundGeo, groundMat);
+            ground.rotation.x = -Math.PI / 2;
+            ground.position.y = -1.5;
+            ground.receiveShadow = true;
+            scene.add(ground);
+
+            const grid = new THREE.GridHelper(20, 40, 0x0f3460, 0x0f3460);
+            grid.position.y = -1.49;
+            scene.add(grid);
+
+            const metalMat = new THREE.MeshStandardMaterial({ color: 0x888899, roughness: 0.3, metalness: 0.9 });
+            const darkMetalMat = new THREE.MeshStandardMaterial({ color: 0x333344, roughness: 0.4, metalness: 0.8 });
+            const pcbMat = new THREE.MeshStandardMaterial({ color: 0x0a5e2a, roughness: 0.6, metalness: 0.1 });
+            const chipMat = new THREE.MeshStandardMaterial({ color: 0x1a1a1a, roughness: 0.3, metalness: 0.5 });
+            const goldMat = new THREE.MeshStandardMaterial({ color: 0xdaa520, roughness: 0.2, metalness: 0.95 });
+            const labelMat = new THREE.MeshStandardMaterial({ color: 0xeeeeee, roughness: 0.8, metalness: 0.0 });
+            const connectorMat = new THREE.MeshStandardMaterial({ color: 0x222222, roughness: 0.5, metalness: 0.6 });
+            const controllerMat = new THREE.MeshStandardMaterial({ color: 0x0d0d0d, roughness: 0.2, metalness: 0.7 });
+            const stickerMat = new THREE.MeshStandardMaterial({ color: 0x2196F3, roughness: 0.9, metalness: 0.0 });
+            const thermalPadMat = new THREE.MeshStandardMaterial({ color: 0x5588aa, roughness: 0.9, metalness: 0.0, transparent: true, opacity: 0.85 });
+
+            const W = 2.8, H = 0.28, D = 3.8;
+
+            function createTopCover() {
+                const group = new THREE.Group();
+                const topShape = new THREE.Shape();
+                const r = 0.08;
+                topShape.moveTo(-W/2 + r, -D/2);
+                topShape.lineTo(W/2 - r, -D/2);
+                topShape.quadraticCurveTo(W/2, -D/2, W/2, -D/2 + r);
+                topShape.lineTo(W/2, D/2 - r);
+                topShape.quadraticCurveTo(W/2, D/2, W/2 - r, D/2);
+                topShape.lineTo(-W/2 + r, D/2);
+                topShape.quadraticCurveTo(-W/2, D/2, -W/2, D/2 - r);
+                topShape.lineTo(-W/2, -D/2 + r);
+                topShape.quadraticCurveTo(-W/2, -D/2, -W/2 + r, -D/2);
+                const extSettings = { depth: 0.04, bevelEnabled: true, bevelThickness: 0.01, bevelSize: 0.01, bevelSegments: 3 };
+                const topGeo = new THREE.ExtrudeGeometry(topShape, extSettings);
+                const topMesh = new THREE.Mesh(topGeo, metalMat.clone());
+                topMesh.rotation.x = Math.PI / 2;
+                topMesh.position.y = H / 2;
+                topMesh.castShadow = true;
+                group.add(topMesh);
+                const stickerGeo = new THREE.PlaneGeometry(W * 0.75, D * 0.5);
+                const sticker = new THREE.Mesh(stickerGeo, stickerMat);
+                sticker.rotation.x = -Math.PI / 2;
+                sticker.position.y = H / 2 + 0.05;
+                sticker.position.z = -0.2;
+                group.add(sticker);
+                const canvas = document.createElement('canvas');
+                canvas.width = 512; canvas.height = 256;
+                const ctx = canvas.getContext('2d');
+                ctx.fillStyle = '#2196F3';
+                ctx.fillRect(0, 0, 512, 256);
+                ctx.fillStyle = '#ffffff';
+                ctx.font = 'bold 72px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText('SSD 1TB', 256, 100);
+                ctx.font = '36px Arial';
+                ctx.fillText('SOLID STATE DRIVE', 256, 160);
+                ctx.font = '24px Arial';
+                ctx.fillText('SATA III · 560 MB/s', 256, 210);
+                const texture = new THREE.CanvasTexture(canvas);
+                sticker.material = new THREE.MeshStandardMaterial({ map: texture, roughness: 0.8 });
+                for (let sx of [-1, 1]) {
+                    for (let sz of [-1, 1]) {
+                        const screwGeo = new THREE.CylinderGeometry(0.04, 0.04, 0.03, 16);
+                        const screw = new THREE.Mesh(screwGeo, darkMetalMat);
+                        screw.position.set(sx * (W/2 - 0.15), H/2 + 0.05, sz * (D/2 - 0.15));
+                        group.add(screw);
+                        const crossGeo1 = new THREE.BoxGeometry(0.05, 0.01, 0.01);
+                        const crossGeo2 = new THREE.BoxGeometry(0.01, 0.01, 0.05);
+                        const c1 = new THREE.Mesh(crossGeo1, metalMat);
+                        const c2 = new THREE.Mesh(crossGeo2, metalMat);
+                        c1.position.copy(screw.position); c1.position.y += 0.015;
+                        c2.position.copy(screw.position); c2.position.y += 0.015;
+                        group.add(c1, c2);
+                    }
+                }
+                group.userData = { name: 'Top Cover', assembledY: 0, explodedY: 3.5 };
+                return group;
+            }
+
+            function createThermalPad() {
+                const group = new THREE.Group();
+                const padGeo = new THREE.BoxGeometry(W * 0.85, 0.03, D * 0.6);
+                const pad = new THREE.Mesh(padGeo, thermalPadMat);
+                pad.castShadow = true;
+                group.add(pad);
+                group.userData = { name: 'Thermal Pad', assembledY: 0, explodedY: 2.4 };
+                return group;
+            }
+
+            function createPCB() {
+                const group = new THREE.Group();
+                const pcbGeo = new THREE.BoxGeometry(W * 0.92, 0.06, D * 0.9);
+                const pcb = new THREE.Mesh(pcbGeo, pcbMat);
+                pcb.castShadow = true;
+                group.add(pcb);
+                const traceMat = new THREE.MeshStandardMaterial({ color: 0xc8a82e, roughness: 0.3, metalness: 0.8 });
+                for (let i = 0; i < 15; i++) {
+                    const traceGeo = new THREE.BoxGeometry(0.02, 0.005, Math.random() * 1.5 + 0.3);
+                    const trace = new THREE.Mesh(traceGeo, traceMat);
+                    trace.position.set((Math.random() - 0.5) * W * 0.8, 0.033, (Math.random() - 0.5) * D * 0.7);
+                    group.add(trace);
+                }
+                for (let i = 0; i < 10; i++) {
+                    const traceGeo = new THREE.BoxGeometry(Math.random() * 1.2 + 0.3, 0.005, 0.02);
+                    const trace = new THREE.Mesh(traceGeo, traceMat);
+                    trace.position.set((Math.random() - 0.5) * W * 0.7, 0.033, (Math.random() - 0.5) * D * 0.6);
+                    group.add(trace);
+                }
+                const smdMat = new THREE.MeshStandardMaterial({ color: 0x333333, roughness: 0.5, metalness: 0.3 });
+                for (let i = 0; i < 25; i++) {
+                    const size = Math.random() * 0.04 + 0.02;
+                    const smdGeo = new THREE.BoxGeometry(size, 0.02, size * (0.5 + Math.random()));
+                    const smd = new THREE.Mesh(smdGeo, smdMat);
+                    smd.position.set((Math.random() - 0.5) * W * 0.8, 0.04, (Math.random() - 0.5) * D * 0.75);
+                    group.add(smd);
+                }
+                const resMat = new THREE.MeshStandardMaterial({ color: 0x1a1a1a, roughness: 0.4, metalness: 0.2 });
+                for (let i = 0; i < 8; i++) {
+                    const resGeo = new THREE.BoxGeometry(0.08, 0.02, 0.04);
+                    const res = new THREE.Mesh(resGeo, resMat);
+                    res.position.set((Math.random() - 0.5) * W * 0.6, 0.04, (Math.random() - 0.5) * D * 0.5);
+                    group.add(res);
+                }
+                group.userData = { name: 'PCB Board', assembledY: 0, explodedY: 0.8 };
+                return group;
+            }
+
+            function createNANDChips() {
+                const group = new THREE.Group();
+                const chipPositions = [{ x: -0.7, z: -0.6 }, { x: 0.7, z: -0.6 }, { x: -0.7, z: 0.6 }, { x: 0.7, z: 0.6 }];
+                chipPositions.forEach((pos, idx) => {
+                    const chipGroup = new THREE.Group();
+                    const chipGeo = new THREE.BoxGeometry(0.7, 0.06, 0.55);
+                    const chip = new THREE.Mesh(chipGeo, chipMat.clone());
+                    chip.castShadow = true;
+                    chipGroup.add(chip);
+                    const markCanvas = document.createElement('canvas');
+                    markCanvas.width = 256; markCanvas.height = 192;
+                    const mctx = markCanvas.getContext('2d');
+                    mctx.fillStyle = '#1a1a1a';
+                    mctx.fillRect(0, 0, 256, 192);
+                    mctx.fillStyle = '#999999';
+                    mctx.font = 'bold 28px monospace';
+                    mctx.textAlign = 'center';
+                    mctx.fillText('NAND FLASH', 128, 60);
+                    mctx.font = '20px monospace';
+                    mctx.fillText(`256GB TLC V${idx + 1}`, 128, 100);
+                    mctx.fillText(`3D-${96 + idx * 16}L`, 128, 135);
+                    const markTex = new THREE.CanvasTexture(markCanvas);
+                    const markGeo = new THREE.PlaneGeometry(0.6, 0.45);
+                    const mark = new THREE.Mesh(markGeo, new THREE.MeshStandardMaterial({ map: markTex, roughness: 0.5 }));
+                    mark.rotation.x = -Math.PI / 2;
+                    mark.position.y = 0.031;
+                    chipGroup.add(mark);
+                    for (let p = 0; p < 12; p++) {
+                        const pinGeo = new THREE.BoxGeometry(0.02, 0.01, 0.04);
+                        const pin = new THREE.Mesh(pinGeo, goldMat);
+                        pin.position.set(-0.32 + p * 0.055, -0.03, -0.27);
+                        chipGroup.add(pin);
+                        const pin2 = pin.clone();
+                        pin2.position.z = 0.27;
+                        chipGroup.add(pin2);
+                    }
+                    chipGroup.position.set(pos.x, 0.07, pos.z);
+                    group.add(chipGroup);
+                });
+                group.userData = { name: 'NAND Flash Chips', assembledY: 0, explodedY: 1.6 };
+                return group;
+            }
+
+            function createController() {
+                const group = new THREE.Group();
+                const ctrlGeo = new THREE.BoxGeometry(0.5, 0.08, 0.5);
+                const ctrl = new THREE.Mesh(ctrlGeo, controllerMat);
+                ctrl.castShadow = true;
+                ctrl.position.set(0, 0.07, 0);
+                group.add(ctrl);
+                const cCanvas = document.createElement('canvas');
+                cCanvas.width = 256; cCanvas.height = 256;
+                const cctx = cCanvas.getContext('2d');
+                cctx.fillStyle = '#0d0d0d';
+                cctx.fillRect(0, 0, 256, 256);
+                cctx.fillStyle = '#aaaaaa';
+                cctx.font = 'bold 32px monospace';
+                cctx.textAlign = 'center';
+                cctx.fillText('SSD', 128, 80);
+                cctx.fillText('CTRL', 128, 120);
+                cctx.font = '20px monospace';
+                cctx.fillText('ARM-R5', 128, 165);
+                cctx.beginPath();
+                cctx.arc(40, 40, 12, 0, Math.PI * 2);
+                cctx.fillStyle = '#666666';
+                cctx.fill();
+                const cTex = new THREE.CanvasTexture(cCanvas);
+                const cLabelGeo = new THREE.PlaneGeometry(0.45, 0.45);
+                const cLabel = new THREE.Mesh(cLabelGeo, new THREE.MeshStandardMaterial({ map: cTex, roughness: 0.3 }));
+                cLabel.rotation.x = -Math.PI / 2;
+                cLabel.position.set(0, 0.112, 0);
+                group.add(cLabel);
+                for (let bx = 0; bx < 6; bx++) {
+                    for (let bz = 0; bz < 6; bz++) {
+                        const padGeo = new THREE.SphereGeometry(0.015, 8, 8);
+                        const pad = new THREE.Mesh(padGeo, goldMat);
+                        pad.position.set(-0.15 + bx * 0.06, 0.03, -0.15 + bz * 0.06);
+                        group.add(pad);
+                    }
+                }
+                group.userData = { name: 'Controller', assembledY: 0, explodedY: 1.6 };
+                return group;
+            }
+
+            function createDRAM() {
+                const group = new THREE.Group();
+                const dramGeo = new THREE.BoxGeometry(0.35, 0.05, 0.25);
+                const dram = new THREE.Mesh(dramGeo, chipMat.clone());
+                dram.castShadow = true;
+                dram.position.set(0, 0.06, -1.2);
+                group.add(dram);
+                const dCanvas = document.createElement('canvas');
+                dCanvas.width = 256; dCanvas.height = 192;
+                const dctx = dCanvas.getContext('2d');
+                dctx.fillStyle = '#1a1a1a';
+                dctx.fillRect(0, 0, 256, 192);
+                dctx.fillStyle = '#888888';
+                dctx.font = 'bold 28px monospace';
+                dctx.textAlign = 'center';
+                dctx.fillText('DRAM', 128, 70);
+                dctx.font = '22px monospace';
+                dctx.fillText('1GB DDR4', 128, 115);
+                const dTex = new THREE.CanvasTexture(dCanvas);
+                const dLabelGeo = new THREE.PlaneGeometry(0.3, 0.2);
+                const dLabel = new THREE.Mesh(dLabelGeo, new THREE.MeshStandardMaterial({ map: dTex, roughness: 0.4 }));
+                dLabel.rotation.x = -Math.PI / 2;
+                dLabel.position.set(0, 0.086, -1.2);
+                group.add(dLabel);
+                for (let p = 0; p < 8; p++) {
+                    const pinGeo = new THREE.BoxGeometry(0.015, 0.008, 0.03);
+                    const pin = new THREE.Mesh(pinGeo, goldMat);
+                    pin.position.set(-0.14 + p * 0.04, 0.035, -1.08);
+                    group.add(pin);
+                    const pin2 = pin.clone();
+                    pin2.position.z = -1.32;
+                    group.add(pin2);
+                }
+                group.userData = { name: 'DRAM Cache', assembledY: 0, explodedY: 1.6 };
+                return group;
+            }
+
+            function createSATAConnector() {
+                const group = new THREE.Group();
+                const dataConnGeo = new THREE.BoxGeometry(0.8, 0.12, 0.15);
+                const dataConn = new THREE.Mesh(dataConnGeo, connectorMat);
+                dataConn.position.set(-0.35, 0, D * 0.45);
+                dataConn.castShadow = true;
+                group.add(dataConn);
+                for (let p = 0; p < 7; p++) {
+                    const pinGeo = new THREE.BoxGeometry(0.06, 0.08, 0.01);
+                    const pin = new THREE.Mesh(pinGeo, goldMat);
+                    pin.position.set(-0.55 + p * 0.1, 0, D * 0.45 + 0.075);
+                    group.add(pin);
+                }
+                const powerConnGeo = new THREE.BoxGeometry(1.0, 0.12, 0.15);
+                const powerConn = new THREE.Mesh(powerConnGeo, connectorMat);
+                powerConn.position.set(0.55, 0, D * 0.45);
+                powerConn.castShadow = true;
+                group.add(powerConn);
+                for (let p = 0; p < 15; p++) {
+                    const pinGeo = new THREE.BoxGeometry(0.03, 0.08, 0.01);
+                    const pin = new THREE.Mesh(pinGeo, goldMat);
+                    pin.position.set(0.1 + p * 0.06, 0, D * 0.45 + 0.075);
+                    group.add(pin);
+                }
+                const gapGeo = new THREE.BoxGeometry(0.08, 0.12, 0.15);
+                const gap = new THREE.Mesh(gapGeo, new THREE.MeshStandardMaterial({ color: 0x111111, roughness: 0.9 }));
+                gap.position.set(0.1, 0, D * 0.45);
+                group.add(gap);
+                group.userData = { name: 'SATA Connector', assembledY: 0, explodedY: 0.8 };
+                return group;
+            }
+
+            function createBottomCover() {
+                const group = new THREE.Group();
+                const botShape = new THREE.Shape();
+                const r = 0.08;
+                botShape.moveTo(-W/2 + r, -D/2);
+                botShape.lineTo(W/2 - r, -D/2);
+                botShape.quadraticCurveTo(W/2, -D/2, W/2, -D/2 + r);
+                botShape.lineTo(W/2, D/2 - r);
+                botShape.quadraticCurveTo(W/2, D/2, W/2 - r, D/2);
+                botShape.lineTo(-W/2 + r, D/2);
+                botShape.quadraticCurveTo(-W/2, D/2, -W/2, D/2 - r);
+                botShape.lineTo(-W/2, -D/2 + r);
+                botShape.quadraticCurveTo(-W/2, -D/2, -W/2 + r, -D/2);
+                const extSettings = { depth: 0.04, bevelEnabled: true, bevelThickness: 0.01, bevelSize: 0.01, bevelSegments: 3 };
+                const botGeo = new THREE.ExtrudeGeometry(botShape, extSettings);
+                const botMat2 = metalMat.clone();
+                botMat2.color.set(0x666677);
+                const botMesh = new THREE.Mesh(botGeo, botMat2);
+                botMesh.rotation.x = -Math.PI / 2;
+                botMesh.position.y = -H / 2 - 0.04;
+                botMesh.castShadow = true;
+                group.add(botMesh);
+                for (let sx of [-1, 1]) {
+                    for (let sz of [-1, 1]) {
+                        const holeGeo = new THREE.RingGeometry(0.02, 0.05, 16);
+                        const hole = new THREE.Mesh(holeGeo, darkMetalMat);
+                        hole.rotation.x = -Math.PI / 2;
+                        hole.position.set(sx * (W/2 - 0.15), -H/2 - 0.039, sz * (D/2 - 0.15));
+                        group.add(hole);
+                    }
+                }
+                for (let sz of [-1, 1]) {
+                    for (let sx of [-1, 1]) {
+                        const mHoleGeo = new THREE.CylinderGeometry(0.04, 0.04, 0.06, 16);
+                        const mHole = new THREE.Mesh(mHoleGeo, darkMetalMat);
+                        mHole.rotation.x = Math.PI / 2;
+                        mHole.position.set(sx * W / 2, -0.05, sz * 1.2);
+                        group.add(mHole);
+                    }
+                }
+                group.userData = { name: 'Bottom Case', assembledY: 0, explodedY: -0.8 };
+                return group;
+            }
+
+            const ssdGroup = new THREE.Group();
+            scene.add(ssdGroup);
+
+            const topCover = createTopCover();
+            const thermalPad = createThermalPad();
+            const nandChips = createNANDChips();
+            const controller = createController();
+            const dramCache = createDRAM();
+            const pcb = createPCB();
+            const sataConnector = createSATAConnector();
+            const bottomCover = createBottomCover();
+
+            const allParts = [topCover, thermalPad, nandChips, controller, dramCache, pcb, sataConnector, bottomCover];
+            allParts.forEach(p => ssdGroup.add(p));
+
+            let animationPhase = 'disassembling';
+            let animationTime = 0;
+            const ANIM_DURATION = 3.0;
+            const PAUSE_DURATION = 2.5;
+            let pauseTimer = 0;
+            let autoPlay = true;
+
+            function easeOutBack(t) {
+                const c1 = 1.70158;
+                const c3 = c1 + 1;
+                return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2);
+            }
+
+            function updateParts(progress) {
+                allParts.forEach((part, index) => {
+                    const staggerDelay = index * 0.08;
+                    const partProgress = Math.max(0, Math.min(1, (progress - staggerDelay) / (1 - staggerDelay * 0.5)));
+                    const eased = easeOutBack(partProgress);
+                    const targetY = part.userData.explodedY;
+                    part.position.y = THREE.MathUtils.lerp(part.userData.assembledY, targetY, eased);
+                    if (part !== pcb && part !== sataConnector) {
+                        part.rotation.y = eased * 0.05 * (index % 2 === 0 ? 1 : -1);
+                    }
+                });
+            }
+
+            const clock = new THREE.Clock();
+            const particleCount = 200;
+            const particleGeo = new THREE.BufferGeometry();
+            const particlePositions = new Float32Array(particleCount * 3);
+            for (let i = 0; i < particleCount; i++) {
+                particlePositions[i * 3] = (Math.random() - 0.5) * 15;
+                particlePositions[i * 3 + 1] = Math.random() * 8 - 1;
+                particlePositions[i * 3 + 2] = (Math.random() - 0.5) * 15;
+            }
+            particleGeo.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3));
+            const particleMat = new THREE.PointsMaterial({ color: 0x4488ff, size: 0.02, transparent: true, opacity: 0.4 });
+            const particles = new THREE.Points(particleGeo, particleMat);
+            scene.add(particles);
+
+            const title = document.createElement('div');
+            title.style.cssText = `
+              position: absolute; top: 30px; left: 50%; transform: translateX(-50%);
+              color: #fff; font-family: 'Segoe UI', sans-serif; font-size: 22px; font-weight: 700;
+              text-align: center; z-index: 100; letter-spacing: 2px;
+              text-shadow: 0 2px 20px rgba(33,150,243,0.5);
+            `;
+            title.textContent = 'SSD DISASSEMBLY';
+            container.appendChild(title);
+
+            const partLabel = document.createElement('div');
+            partLabel.style.cssText = `
+              position: absolute; top: 80px; left: 50%; transform: translateX(-50%);
+              color: #2196F3; font-family: 'Segoe UI', sans-serif; font-size: 16px; font-weight: 500;
+              text-align: center; z-index: 100; letter-spacing: 1px;
+              transition: opacity 0.3s;
+            `;
+            container.appendChild(partLabel);
+
+            const progressContainer = document.createElement('div');
+            progressContainer.style.cssText = `
+              position: absolute; top: 115px; left: 50%; transform: translateX(-50%);
+              width: 240px; height: 4px; background: rgba(255,255,255,0.1);
+              border-radius: 2px; z-index: 100; overflow: hidden;
+            `;
+            const progressBar = document.createElement('div');
+            progressBar.style.cssText = `
+              width: 0%; height: 100%; background: linear-gradient(90deg, #2196F3, #00BCD4);
+              border-radius: 2px; transition: width 0.1s;
+            `;
+            progressContainer.appendChild(progressBar);
+            container.appendChild(progressContainer);
+
+            function getCurrentPartName(progress) {
+                const partNames = [
+                    'Top Cover', 'Thermal Pad', 'NAND Flash Chips', 'Controller',
+                    'DRAM Cache', 'PCB Board', 'SATA Connector', 'Bottom Case'
+                ];
+                const idx = Math.min(Math.floor(progress * partNames.length), partNames.length - 1);
+                return partNames[idx];
+            }
+
+            function animate() {
+                requestAnimationFrame(animate);
+                const delta = clock.getDelta();
+                const positions = particles.geometry.attributes.position.array;
+                for (let i = 0; i < particleCount; i++) {
+                    positions[i * 3 + 1] += delta * 0.1;
+                    if (positions[i * 3 + 1] > 7) positions[i * 3 + 1] = -1;
+                }
+                particles.geometry.attributes.position.needsUpdate = true;
+
+                if (animationPhase === 'disassembling') {
+                    animationTime += delta;
+                    const progress = Math.min(animationTime / ANIM_DURATION, 1);
+                    updateParts(progress);
+                    progressBar.style.width = `${progress * 100}%`;
+                    partLabel.textContent = `⚙ ${getCurrentPartName(progress)}`;
+                    title.textContent = 'SSD DISASSEMBLY';
+                    ssdGroup.rotation.y = Math.sin(animationTime * 0.3) * 0.2;
+                    if (progress >= 1) {
+                        animationPhase = 'paused';
+                        pauseTimer = 0;
+                    }
+                } else if (animationPhase === 'paused') {
+                    pauseTimer += delta;
+                    ssdGroup.rotation.y += delta * 0.5;
+                    if (pauseTimer >= PAUSE_DURATION) {
+                        animationPhase = 'assembling';
+                        animationTime = 0;
+                    }
+                } else if (animationPhase === 'assembling') {
+                    animationTime += delta;
+                    const progress = Math.min(animationTime / ANIM_DURATION, 1);
+                    updateParts(1 - progress);
+                    progressBar.style.width = `${(1 - progress) * 100}%`;
+                    title.textContent = 'SSD ASSEMBLY';
+                    const reversePartNames = ['Bottom Case', 'SATA Connector', 'PCB Board', 'DRAM Cache', 'Controller', 'NAND Flash Chips', 'Thermal Pad', 'Top Cover'];
+                    const idx = Math.min(Math.floor(progress * reversePartNames.length), reversePartNames.length - 1);
+                    partLabel.textContent = `⚙ ${reversePartNames[idx]}`;
+                    ssdGroup.rotation.y = Math.sin(animationTime * 0.3) * 0.2;
+                    if (progress >= 1) {
+                        animationPhase = 'pause_assembled';
+                        pauseTimer = 0;
+                    }
+                } else if (animationPhase === 'pause_assembled') {
+                    pauseTimer += delta;
+                    ssdGroup.rotation.y += delta * 0.3;
+                    if (pauseTimer >= PAUSE_DURATION) {
+                        animationPhase = 'disassembling';
+                        animationTime = 0;
+                    }
+                }
+                controls.update();
+                renderer.render(scene, camera);
+            }
+
+            animate();
+
+            window.addEventListener('resize', () => {
+                const w = container.clientWidth;
+                const h = container.clientHeight;
+                camera.aspect = w / h;
+                camera.updateProjectionMatrix();
+                renderer.setSize(w, h);
+            });
+        }
+    </script>
+</body>
+</html>
