@@ -1,0 +1,576 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <script id="theme-init">
+        (function () {
+            try {
+                var t = localStorage.getItem('theme');
+                if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                if (t === 'dark') document.documentElement.classList.add('dark');
+            } catch (e) {}
+        })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms &amp; Conditions | MPC Consulting</title>
+    <meta name="description" content="Terms and conditions for MPC Consulting's hardware upgrade, software optimisation and website development services.">
+    <link rel="canonical" href="https://www.mpcconsulting.co.za/terms-and-conditions.html">
+    <meta name="robots" content="noindex, nofollow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MPC Consulting">
+    <meta property="og:title" content="Terms &amp; Conditions | MPC Consulting">
+    <meta property="og:description" content="Terms and conditions for MPC Consulting services.">
+    <meta property="og:url" content="https://www.mpcconsulting.co.za/terms-and-conditions.html">
+    <meta property="og:locale" content="en_ZA">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23E9047E'/><circle cx='16' cy='16' r='9' fill='%23F87C1F'/></svg>">
+        <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' };</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --purple: #3B3664;
+            --gray: #777777;
+            --hotpink: #E9047E;
+            --orange: #F87C1F;
+            --gradient: linear-gradient(135deg, #F87C1F 0%, #E9047E 100%);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: var(--gray);
+            overflow-x: hidden;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .font-display {
+            font-family: 'Nunito Sans', sans-serif;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+        h1, h2, h3, h4 {
+            color: var(--purple);
+            font-family: 'Nunito Sans', sans-serif;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            font-weight: 800;
+        }
+        .glass {
+            background: #fafafa;
+            border: 1px solid #eceef1;
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass:hover {
+            background: #ffffff;
+            border: 2px solid #E9047E;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .btn-primary {
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-image: var(--gradient);
+            color: #ffffff;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 15px;
+            padding: 14px 28px;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-image: linear-gradient(135deg, #E9047E 0%, #F87C1F 100%);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(232, 4, 126, 0.25);
+        }
+        .eyebrow {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 9999px;
+            background-image: var(--gradient);
+            color: #ffffff;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+            color: var(--purple);
+        }
+        .nav-link:hover {
+            color: var(--hotpink);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--hotpink);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .tc-section {
+            border-left: 2px solid var(--hotpink);
+        }
+    </style>
+    <style id="dark-mode-overrides">
+        html.dark { color-scheme: dark; }
+        html.dark body { background: #000000; color: #cbd5e1; }
+        html.dark h1, html.dark h2, html.dark h3, html.dark h4 { color: #f8fafc; }
+        html.dark .text-\[\#777777\] { color: #cbd5e1 !important; }
+        html.dark .text-\[\#3B3664\] { color: #f8fafc !important; }
+        html.dark .text-accent { color: #f8fafc !important; }
+        html.dark .text-slate-500, html.dark .text-slate-400 { color: #94a3b8 !important; }
+        html.dark .glass { background: #111111; border-color: #334155; }
+        html.dark .glass:hover { background: #1a1a1a; border-color: #E9047E; }
+        html.dark nav { background: rgba(0, 0, 0, 0.92); border-color: #334155; }
+        html.dark .nav-link { color: #f8fafc; }
+        html.dark .nav-link:hover { color: #E9047E; }
+        html.dark section[style*="#FCFBFD"] { background: linear-gradient(180deg, #000000 0%, #111111 100%) !important; }
+        html.dark .bg-\[\#F8F9FB\] { background-color: #111111 !important; }
+    </style>
+    <style id="scroll-nav-styles">
+        #site-nav {
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: transparent;
+            border-bottom: 1px solid transparent;
+            box-shadow: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #site-nav.scrolled {
+            top: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(92%, 1180px);
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.9);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+            border-radius: 1rem;
+        }
+        html.dark #site-nav.scrolled {
+            background: rgba(0, 0, 0, 0.55);
+            border-bottom-color: rgba(255, 255, 255, 0.12);
+        }
+        @media (max-width: 768px) {
+            #site-nav.scrolled { width: calc(100% - 1.5rem); top: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/27671932159?text=Hi%20MPC%20Consulting%2C%20I%20have%20a%20query." target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-[0_0_25px_rgba(37,211,102,0.6)] transition-all duration-300">
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Navigation -->
+    <nav id="site-nav" class="fixed z-50 flex justify-between items-center px-6 py-4 transition-all duration-500 ease-out">
+        <div class="flex items-center gap-2">
+            <a href="index.html" class="font-display text-xl font-extrabold tracking-tighter text-[#3B3664]">MPC <span style="background-image: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent;">Consulting</span></a>
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-semibold">
+            <a href="index.html#services" class="nav-link transition-colors">Services</a>
+            <a href="index.html#web-development" class="nav-link transition-colors">Web Dev</a>
+            <a href="terms-and-conditions.html" class="nav-link text-[#E9047E] transition-colors">Terms</a>
+        </div>
+        
+        <button id="theme-toggle" type="button" aria-label="Toggle dark mode" class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-200 bg-white text-[#3B3664] hover:border-[#E9047E] transition-colors dark:bg-slate-800 dark:border-slate-600 dark:text-slate-100">
+
+                        <svg class="w-5 h-5 block dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+
+                        <svg class="w-5 h-5 hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
+
+                    </button>
+<a href="index.html#contact" class="btn-primary px-6 py-2.5 text-sm">
+            Free Consultation
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[50vh] flex items-center justify-center px-6 pt-24 overflow-hidden" style="background: linear-gradient(180deg, #FCFBFD 0%, #ffffff 100%);">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(232,4,126,0.06),transparent_70%)]"></div>
+        <div class="relative z-10 text-center max-w-4xl">
+            <div class="eyebrow mb-6 reveal">Effective Date: August 2026</div>
+            <h1 class="font-display text-4xl md:text-6xl font-extrabold text-[#3B3664] leading-tight mb-6 reveal">
+                Terms & <span style="background-image: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent;">Conditions</span>
+            </h1>
+            <p class="text-[#777777] text-lg max-w-2xl mx-auto reveal" style="transition-delay: 200ms">
+                Website Services Terms & Conditions governing the website design, development, hosting and maintenance services provided by MPC Consulting.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10 reveal" style="transition-delay: 300ms">
+                <a href="MPC_Consulting_Terms_and_Conditions.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                    Download PDF
+                </a>
+                <a href="index.html#contact" class="btn-primary">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Content -->
+    <section class="py-20 px-6 relative">
+        <div class="max-w-4xl mx-auto">
+            <div class="glass p-8 md:p-12 rounded-3xl space-y-10 reveal">
+
+                <div class="text-[#555555] leading-relaxed">
+                    <p class="mb-4">These Terms and Conditions govern the website design, development, hosting, maintenance and related services provided by MPC Consulting ("MPC Consulting", "we", "us" or "our") to the client ("the Client", "you" or "your").</p>
+                    <p>By accepting a quotation, paying a deposit, setup fee or monthly fee, the Client agrees to these Terms and Conditions.</p>
+                </div>
+
+                <!-- 1. Website Packages -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">1. Website Packages</h2>
+                    <div class="space-y-6 text-[#555555] leading-relaxed">
+                        <div>
+                            <h3 class="font-bold text-[#E9047E] mb-1">1.1 Starter Website</h3>
+                            <p class="text-sm text-[#777777] mb-1">1 to 6 Page Professional Website</p>
+                            <p class="text-sm">Setup Fee: R1,500 once-off (or payment plan: split into 2 payments) &nbsp;|&nbsp; Monthly Fee: R249 per month (includes hosting & maintenance)</p>
+                            <p class="text-sm mt-2">Includes a free domain and free hosting for the first 1 month.</p>
+                            <p class="text-sm mt-2">This package is suitable for individuals, small businesses and start-up businesses requiring a professional online presence.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-[#E9047E] mb-1">1.2 Business Website</h3>
+                            <p class="text-sm text-[#777777] mb-1">6 to 10 Page Professional Website</p>
+                            <p class="text-sm">Setup Fee: R2,500 once-off (or payment plan: split into 2 payments) &nbsp;|&nbsp; Monthly Fee: R299 per month (includes hosting & maintenance)</p>
+                            <p class="text-sm mt-2">Includes a free domain and free hosting for the first 3 months.</p>
+                            <p class="text-sm mt-2">This package is suitable for established businesses requiring a more detailed and comprehensive website.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-[#E9047E] mb-1">1.3 Premium Website</h3>
+                            <p class="text-sm text-[#777777] mb-1">Full Featured Professional Website</p>
+                            <p class="text-sm">Setup Fee: R3,500 once-off (or payment plan: split into 2 payments) &nbsp;|&nbsp; Monthly Fee: R349 per month (includes hosting & maintenance)</p>
+                            <p class="text-sm mt-2">Includes a free domain and free hosting for the first 6 months.</p>
+                            <p class="text-sm mt-2">This package is designed for businesses requiring a more advanced and feature-rich website. The final scope and functionality may vary depending on the Client's requirements. Additional functionality may be quoted separately.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Setup Fees and Payments -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">2. Setup Fees and Payments</h2>
+                    <ol class="list-decimal list-inside space-y-2 text-[#555555] leading-relaxed text-sm">
+                        <li>The applicable setup fee covers the initial website design and development within the agreed package scope.</li>
+                        <li>The setup fee must be paid before website development begins, unless otherwise agreed in writing.</li>
+                        <li>Any additional services, features or work outside the agreed package scope may be subject to additional charges.</li>
+                        <li>Monthly fees are payable in advance to maintain active services.</li>
+                        <li>MPC Consulting reserves the right to suspend services where payments remain outstanding.</li>
+                    </ol>
+                </div>
+
+                <!-- 3. Monthly Fees -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">3. Monthly Fees</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm mb-4">The monthly fee covers the ongoing services included in the Client's selected package. Depending on the package and agreed service scope, this may include:</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-[#555555]">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Website hosting</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Basic website maintenance</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Security and software updates</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Technical support</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Website monitoring</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Basic assistance with website-related issues</li>
+                    </ul>
+                    <p class="text-sm text-[#555555] mt-4">The monthly fee does not automatically include major redesigns, new pages, advanced functionality or extensive content changes unless specifically agreed.</p>
+                </div>
+
+                <!-- 4. Domain Registration -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">4. Domain Registration and Renewal</h2>
+                    <ol class="list-decimal list-inside space-y-2 text-[#555555] leading-relaxed text-sm">
+                        <li>A domain name may be registered on behalf of the Client where agreed.</li>
+                        <li>Domain registration and renewal costs may be charged separately unless specifically stated as included in the Client's package or quotation.</li>
+                        <li>Domain names must be renewed before their expiry date to avoid interruption or loss of the domain.</li>
+                        <li>MPC Consulting will make reasonable efforts to notify the Client of renewal requirements where applicable.</li>
+                        <li>The Client remains responsible for ensuring that all domain renewal fees are paid when due.</li>
+                    </ol>
+                </div>
+
+                <!-- 5. Client Responsibilities -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">5. Client Responsibilities</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm mb-4">The Client agrees to provide all necessary information and materials required for the development of the website. This may include:</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-[#555555]">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Business information</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Company logo</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Text and website content</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Images</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Product information</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Service descriptions</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Contact details</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Social media links</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Any other information required for the website</li>
+                    </ul>
+                    <p class="text-sm text-[#555555] mt-4">Delays in providing the required information may delay the completion of the project. The Client is responsible for ensuring that all content supplied to MPC Consulting is accurate and that they have permission or the necessary rights to use any images, logos, text or other materials provided.</p>
+                </div>
+
+                <!-- 6. Website Content and Design -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">6. Website Content and Design</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm">MPC Consulting will design the website based on the information, branding and requirements provided by the Client. The Client will have the opportunity to review the website during the development process. Reasonable changes within the original agreed scope may be accommodated. Significant changes, redesigns or changes to the original requirements may result in additional charges. Once the website design has been approved by the Client, additional major changes may be quoted separately.</p>
+                </div>
+
+                <!-- 7. Additional Work -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">7. Additional Work and Features</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm mb-4">The following may be considered additional work and may be charged separately:</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-[#555555]">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Additional pages beyond the selected package</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> E-commerce functionality</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Online stores</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Booking systems</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Advanced forms</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Payment gateway integration</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Custom integrations</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Advanced automation</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Additional content creation</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Logo design or branding work</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Extensive website changes</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Additional maintenance outside the agreed monthly service</li>
+                    </ul>
+                    <p class="text-sm text-[#555555] mt-4">All additional work will be discussed and quoted before work begins.</p>
+                </div>
+
+                <!-- 8. Website Updates -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">8. Website Updates</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm mb-4">Basic website maintenance may be included in the Client's monthly package. Minor updates may include reasonable changes such as:</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-[#555555]">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Updating text</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Replacing images</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Updating contact details</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Making minor corrections</li>
+                    </ul>
+                    <p class="text-sm text-[#555555] mt-4">Major changes, extensive updates or new functionality may be charged separately. MPC Consulting reserves the right to determine whether a requested change falls within normal maintenance or requires additional work.</p>
+                </div>
+
+                <!-- 9. Project Timeframes -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">9. Project Timeframes</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm mb-4">Website completion times depend on:</p>
+                    <ul class="space-y-2 text-sm text-[#555555]">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> The selected package</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> The complexity of the website</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> The availability of content</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> The Client's response time</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Any additional features or changes requested</li>
+                    </ul>
+                    <p class="text-sm text-[#555555] mt-4">MPC Consulting will provide an estimated completion timeframe where possible. Project delays caused by late content, delayed approvals or changes to the agreed scope may result in an extended completion date.</p>
+                </div>
+
+                <!-- 10. Website Approval -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">10. Website Approval</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm mb-4">The Client is responsible for reviewing the website before it goes live. The Client must check:</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-[#555555]">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Spelling and grammar</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Contact details</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Business information</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Images</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Links</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Products and services</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Prices and other important information</li>
+                    </ul>
+                    <p class="text-sm text-[#555555] mt-4">Once the website has been approved and published, the Client accepts responsibility for the accuracy of the approved content.</p>
+                </div>
+
+                <!-- 11. Website Ownership -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">11. Website Ownership</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm">Upon full payment of all applicable setup fees and outstanding invoices, the Client will have ownership rights to the final website content specifically created for their business, subject to any third-party software, themes, plugins, images, fonts or services used. Third-party services remain subject to their own licence agreements and terms. MPC Consulting retains the right to reuse general knowledge, techniques, development methods and non-confidential elements used during the development process.</p>
+                </div>
+
+                <!-- 12. Hosting and Suspension -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">12. Hosting and Website Suspension</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm mb-4">Websites hosted or maintained through MPC Consulting must have all applicable monthly fees paid on time. If payment is not received, MPC Consulting may:</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-[#555555]">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Suspend hosting services</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Temporarily disable the website</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Suspend maintenance services</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Delay additional work or support</li>
+                    </ul>
+                    <p class="text-sm text-[#555555] mt-4">The website may be restored once outstanding payments have been received, subject to any applicable reinstatement requirements.</p>
+                </div>
+
+                <!-- 13. Cancellation -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">13. Cancellation of Services</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm">The Client may cancel their monthly hosting or maintenance services by providing written notice to MPC Consulting. The Client remains responsible for all outstanding fees up to the cancellation date. Where the Client wishes to move their website or domain to another provider, reasonable assistance may be provided. Any migration, transfer or additional technical work may be subject to additional charges.</p>
+                </div>
+
+                <!-- 14. Third-Party Services -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">14. Third-Party Services</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm mb-4">Some websites may rely on third-party services, including but not limited to:</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-[#555555]">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Domain registrars</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Hosting providers</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Payment providers</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Email services</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Plugins</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Themes</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Software platforms</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Analytics services</li>
+                    </ul>
+                    <p class="text-sm text-[#555555] mt-4">MPC Consulting is not responsible for outages, policy changes, price increases, technical failures or service interruptions caused by third-party providers. Any third-party costs may be charged separately unless specifically included in the Client's quotation.</p>
+                </div>
+
+                <!-- 15. Website Security -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">15. Website Security</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm mb-4">MPC Consulting will take reasonable steps to maintain and secure websites under its management. However, no website or online system can be guaranteed to be completely secure. MPC Consulting cannot guarantee protection against:</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-[#555555]">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Hacking</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Malware</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Viruses</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Data loss</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Third-party service failures</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Internet outages</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Cyber-attacks</li>
+                    </ul>
+                    <p class="text-sm text-[#555555] mt-4">Where possible, appropriate backups and security measures may be implemented based on the Client's selected service and website requirements.</p>
+                </div>
+
+                <!-- 16. SEO -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">16. Search Engine Optimisation</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm mb-4">Where SEO services are provided, MPC Consulting will apply reasonable optimisation practices. However, MPC Consulting does not guarantee:</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-[#555555]">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Specific Google rankings</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> First-page search results</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> A specific number of website visitors</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Sales or business results</li>
+                    </ul>
+                    <p class="text-sm text-[#555555] mt-4">Search engine rankings are affected by numerous factors outside the control of MPC Consulting.</p>
+                </div>
+
+                <!-- 17. Limitation of Liability -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">17. Limitation of Liability</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm mb-4">MPC Consulting will make reasonable efforts to provide professional and reliable services. However, MPC Consulting will not be held liable for indirect losses, loss of income, loss of business, loss of data or damages resulting from:</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-[#555555]">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Website downtime</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Third-party failures</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Incorrect information supplied by the Client</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Client failure to maintain services or payments</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full" style="background-image: var(--gradient)"></span> Cyber-attacks or security incidents beyond reasonable control</li>
+                    </ul>
+                    <p class="text-sm text-[#555555] mt-4">The Client remains responsible for maintaining appropriate records and backups of important business information.</p>
+                </div>
+
+                <!-- 18. Portfolio -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">18. Portfolio and Marketing Rights</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm">Unless otherwise agreed in writing, MPC Consulting may display completed website projects in its portfolio, website, social media or marketing materials. MPC Consulting will not disclose confidential Client information without permission.</p>
+                </div>
+
+                <!-- 19. Pricing Changes -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">19. Changes to Pricing and Services</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm">MPC Consulting reserves the right to update its pricing, packages or services. Existing Clients will be given reasonable notice of significant changes that affect their ongoing monthly services. Annual or third-party service costs may change based on supplier pricing.</p>
+                </div>
+
+                <!-- 20. Confidentiality -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">20. Confidentiality</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm">MPC Consulting will treat Client information as confidential and will use such information only for the purpose of providing the agreed services. The Client also agrees not to share confidential business information, processes or proprietary materials belonging to MPC Consulting without permission.</p>
+                </div>
+
+                <!-- 21. General -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">21. General</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm">These Terms and Conditions, together with the Client's quotation or invoice, form the agreement between MPC Consulting and the Client. Any changes to the agreed services should be confirmed in writing. If any part of these Terms and Conditions is found to be unenforceable, the remaining provisions will remain in effect.</p>
+                </div>
+
+                <!-- 22. Acceptance -->
+                <div class="tc-section pl-5">
+                    <h2 class="font-display text-xl font-extrabold text-[#3B3664] mb-4">22. Acceptance of Terms</h2>
+                    <p class="text-[#555555] leading-relaxed text-sm">By accepting a quotation, paying a deposit, setup fee or monthly fee, or instructing MPC Consulting to begin work, the Client confirms that they have read, understood and agreed to these Terms and Conditions.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 reveal">
+                <a href="MPC_Consulting_Terms_and_Conditions.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary px-8 py-4 text-sm font-bold uppercase tracking-widest rounded-sm inline-block">
+                    Download Terms & Conditions (PDF)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-gray-100 bg-[#F8F9FB]">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-2">
+                <span class="font-display text-lg font-extrabold tracking-tighter text-[#3B3664]">MPC <span style="background-image: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent;">Consulting</span></span>
+            </div>
+            <div class="text-slate-500 text-xs font-medium uppercase tracking-widest">
+                &copy; 2026 MPC Consulting. All rights reserved.
+            </div>
+            <div class="flex gap-6 text-[#777777]">
+                <a href="https://www.facebook.com/nicky.padayachie" target="_blank" rel="noopener" class="hover:text-[#E9047E] transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.5 0h-21C.672 0 0 .672 0 1.5v21c0 .828.672 1.5 1.5 1.5h11.31v-9.28H9.47v-3.62h3.34V8.41c0-3.32 2.03-5.13 5-5.13 1.42 0 2.64.106 3 .153v3.48h-2.05c-1.61 0-1.92.765-1.92 1.887v2.48h3.84l-.5 3.62h-3.34V24h6.66c.828 0 1.5-.672 1.5-1.5v-21c0-.828-.672-1.5-1.5-1.5z"/></svg></a>
+                <a href="https://www.google.com/search?q=MPC+Consulting&stick=H4sIAAAAAAAA_-NgU1I1qEi0SExLTklKTU40MzZPS7K0MqgwNzWzSEk1TjQ2Skw1skw1WsTK5xvgrOCcn1dcmlOSmZcOAFGUE7A6AAAA&hl=en&mat=Cf6-4wv0bj8fElcBa0lj_8ygFyt2C8jlB6bmudk6bTuU1Fu6f-V8yPXqgSesjloMkaSNbFV6qjP4dD7-9vo7CoMQctb7RQuWAg88lY7t3qxpknOtdZNthhfvncRsao0hdug&authuser=0" target="_blank" rel="noopener" class="hover:text-[#E9047E] transition-colors" aria-label="Google Business Profile"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+    <script id="theme-toggle-script">
+        (function () {
+            var root = document.documentElement;
+            var btn = document.getElementById('theme-toggle');
+            if (!btn) return;
+            btn.addEventListener('click', function () {
+                var isDark = root.classList.toggle('dark');
+                try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch (e) {}
+            });
+        })();
+    </script>
+    <script id="scroll-nav-script">
+        (function () {
+            var nav = document.getElementById('site-nav');
+            if (!nav) return;
+            function update() { nav.classList.toggle('scrolled', window.scrollY > 12); }
+            update();
+            window.addEventListener('scroll', update, { passive: true });
+        })();
+    </script>
+</body>
+</html>
