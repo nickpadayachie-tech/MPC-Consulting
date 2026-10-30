@@ -892,6 +892,13 @@
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+if (window.location.hash) {
+            var initialTarget = document.querySelector(window.location.hash);
+            if (initialTarget) {
+                initialTarget.scrollIntoView({ behavior: 'auto' });
+            }
+        }
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const target = document.querySelector(this.getAttribute('href'));
