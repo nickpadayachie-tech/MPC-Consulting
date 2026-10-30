@@ -539,10 +539,36 @@
                         <svg class="w-5 h-5 hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
 
                     </button>
+<button id="mobile-menu-toggle" type="button" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-200 bg-white text-[#3B3664] hover:border-[#E9047E] transition-colors dark:bg-slate-800 dark:border-slate-600 dark:text-slate-100" aria-label="Toggle navigation menu" aria-expanded="false">
+  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+</button>
 <a href="#contact" class="btn-primary hidden md:inline-flex px-6 py-2.5 text-sm">
             Free Consultation
         </a>
     </nav>
+<div id="mobile-menu" class="hidden md:hidden fixed top-24 left-4 right-4 z-40 glass rounded-2xl p-4 flex flex-col gap-2 shadow-lg">
+  <a href="#services" class="nav-link transition-colors text-[#3B3664] hover:text-[#E9047E] font-semibold">Services</a>
+  <a href="web-development.html" class="nav-link transition-colors text-[#3B3664] hover:text-[#E9047E] font-semibold">Web Development</a>
+  <a href="#about" class="nav-link transition-colors text-[#3B3664] hover:text-[#E9047E] font-semibold">About</a>
+  <a href="terms-and-conditions.html" class="nav-link transition-colors text-[#3B3664] hover:text-[#E9047E] font-semibold">Terms</a>
+  <a href="#contact" class="nav-link transition-colors text-[#3B3664] hover:text-[#E9047E] font-semibold">Contact</a>
+  <a href="#contact" class="btn-primary mt-2">Free Consultation</a>
+</div>
+<script>
+(function(){
+  var t=document.getElementById('mobile-menu-toggle');
+  var m=document.getElementById('mobile-menu');
+  if(!t||!m) return;
+  var openIcon=t.innerHTML;
+  var closeIcon='<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>';
+  t.addEventListener('click',function(){
+    var hidden=m.classList.toggle('hidden');
+    t.setAttribute('aria-expanded',!hidden);
+    t.innerHTML=hidden?openIcon:closeIcon;
+  });
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.add('hidden');t.setAttribute('aria-expanded','false');t.innerHTML=openIcon;});});
+})();
+</script>
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden" style="background: linear-gradient(180deg, #FCFBFD 0%, #ffffff 100%);">
