@@ -482,7 +482,8 @@
     <style id="scroll-nav-styles">
         #site-nav {
             top: 0;
-            left: 0;
+            left: 50%;
+            transform: translateX(-50%);
             width: 100%;
             background: transparent;
             border-bottom: 1px solid transparent;
@@ -525,6 +526,7 @@
             <span class="font-display text-xl font-extrabold tracking-tighter text-accent">MPC <span style="background-image: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent;">Consulting</span></span>
         </div>
         <div class="hidden md:flex gap-8 text-sm font-semibold">
+            <a href="index.html" class="nav-link transition-colors">Home</a>
             <a href="#services" class="nav-link transition-colors">Services</a>
             <a href="web-development.html" class="nav-link transition-colors">Web Development</a>
             <a href="#about" class="nav-link transition-colors">About</a>
@@ -547,7 +549,7 @@
         </a>
     </nav>
 <div id="mobile-menu" class="hidden md:hidden fixed top-24 left-4 right-4 z-40 bg-white/30 dark:bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 flex flex-col gap-2">
-  <a href="#services" class="nav-link transition-colors text-[#3B3664] hover:text-[#E9047E] font-semibold">Services</a>
+  <a href="index.html" class="nav-link transition-colors text-[#3B3664] hover:text-[#E9047E] font-semibold">Home</a>
   <a href="web-development.html" class="nav-link transition-colors text-[#3B3664] hover:text-[#E9047E] font-semibold">Web Development</a>
   <a href="#about" class="nav-link transition-colors text-[#3B3664] hover:text-[#E9047E] font-semibold">About</a>
   <a href="terms-and-conditions.html" class="nav-link transition-colors text-[#3B3664] hover:text-[#E9047E] font-semibold">Terms</a>
@@ -1203,13 +1205,6 @@
             });
         }, observerOptions);
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-if (window.location.hash) {
-            var initialTarget = document.querySelector(window.location.hash);
-            if (initialTarget) {
-                initialTarget.scrollIntoView({ behavior: 'auto' });
-            }
-        }
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
