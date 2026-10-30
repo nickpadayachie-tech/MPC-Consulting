@@ -11,6 +11,18 @@
             } catch (e) {}
         })();
     </script>
+    <script id="scroll-init">
+        (function () {
+            if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+            var fromSameSite = false;
+            if (document.referrer) {
+                try { fromSameSite = new URL(document.referrer).origin === location.origin; } catch (e) {}
+            }
+            if (location.hash && !fromSameSite) {
+                try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+            }
+        })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <title>Website Design &amp; IT Solutions | MPC Consulting</title>
@@ -512,7 +524,6 @@
     </style>
 </head>
 <body>
-<script>if ("scrollRestoration" in history) history.scrollRestoration="manual";</script>
 
     <!-- WhatsApp Float Button -->
     <a href="https://wa.me/27671932159?text=Hi%20MPC%20Consulting%2C%20I%20have%20a%20query." target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-[0_0_25px_rgba(37,211,102,0.6)] transition-all duration-300">
@@ -1780,6 +1791,24 @@
             function update() { nav.classList.toggle('scrolled', window.scrollY > 12); }
             update();
             window.addEventListener('scroll', update, { passive: true });
+        })();
+    </script>
+    <script id="start-at-top">
+        (function () {
+            function jumpToTop() {
+                var root = document.documentElement;
+                var previous = root.style.scrollBehavior;
+                root.style.scrollBehavior = 'auto';
+                window.scrollTo(0, 0);
+                root.style.scrollBehavior = previous;
+            }
+            function resetScroll() {
+                if (!location.hash) jumpToTop();
+            }
+            window.addEventListener('load', resetScroll);
+            window.addEventListener('pageshow', function (event) {
+                if (event.persisted) resetScroll();
+            });
         })();
     </script>
 </body>
