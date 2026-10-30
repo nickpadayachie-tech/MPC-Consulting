@@ -546,7 +546,7 @@
             Free Consultation
         </a>
     </nav>
-<div id="mobile-menu" class="hidden md:hidden fixed top-24 left-4 right-4 z-40 glass rounded-2xl p-4 flex flex-col gap-2 shadow-lg">
+<div id="mobile-menu" class="hidden md:hidden fixed top-24 left-4 right-4 z-40 bg-transparent rounded-2xl p-4 flex flex-col gap-2">
   <a href="#services" class="nav-link transition-colors text-[#3B3664] hover:text-[#E9047E] font-semibold">Services</a>
   <a href="web-development.html" class="nav-link transition-colors text-[#3B3664] hover:text-[#E9047E] font-semibold">Web Development</a>
   <a href="#about" class="nav-link transition-colors text-[#3B3664] hover:text-[#E9047E] font-semibold">About</a>
@@ -1002,78 +1002,85 @@
 
     <!-- About Section -->
     <section id="about" class="py-24 px-6 bg-[#F8F9FB] relative">
-        <div class="max-w-4xl mx-auto text-center space-y-12">
-            <div class="reveal">
-                <h2 class="font-display text-3xl font-extrabold text-[#3B3664] mb-6">Hardware <br><span style="background-image: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent;">Engineering</span></h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                    <!-- HDD Video -->
-                    <div class="relative group">
-                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-3 py-1 text-[10px] uppercase tracking-widest font-bold rounded-full text-white z-20 whitespace-nowrap" style="background-image: var(--gradient)">Legacy HDD</div>
-                        <div class="relative z-10 glass p-4 rounded-2xl overflow-hidden">
-                            <div class="hdd-stage relative rounded-xl overflow-hidden aspect-[4/3] bg-[#211a40] flex items-center justify-center">
-                                <div class="hdd-platter relative" style="width: 68%; max-width: 300px;">
-                                    <div class="hdd-disc">
-                                        <div class="hdd-tracks"></div>
-                                        <div class="hdd-nub"></div>
-                                        <div class="hdd-spindle"></div>
+        <div class="max-w-6xl mx-auto space-y-12">
+            <div class="max-w-3xl mx-auto text-center reveal">
+                <h2 class="font-display text-3xl md:text-5xl font-extrabold text-[#3B3664] mb-6">About <br><span style="background-image: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent;">MPC Consulting</span></h2>
+                <p class="text-[#777777] leading-relaxed max-w-3xl mx-auto">
+                    MPC Consulting builds professional websites, business email and digital solutions for South African businesses — and delivers surgical hardware upgrades and precision software optimisation that transform a slow, sluggish PC into a super-fast system.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                <div class="reveal space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <!-- HDD Video -->
+                        <div class="relative group">
+                            <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-3 py-1 text-[10px] uppercase tracking-widest font-bold rounded-full text-white z-20 whitespace-nowrap" style="background-image: var(--gradient)">Legacy HDD</div>
+                            <div class="relative z-10 glass p-4 rounded-2xl overflow-hidden">
+                                <div class="hdd-stage relative rounded-xl overflow-hidden aspect-[4/3] bg-[#211a40] flex items-center justify-center">
+                                    <div class="hdd-platter relative" style="width: 68%; max-width: 300px;">
+                                        <div class="hdd-disc">
+                                            <div class="hdd-tracks"></div>
+                                            <div class="hdd-nub"></div>
+                                            <div class="hdd-spindle"></div>
+                                        </div>
+                                        <div class="hdd-arm">
+                                            <div class="hdd-arm-vibe"></div>
+                                        </div>
+                                        <div class="hdd-arm-label">R/W HEAD</div>
                                     </div>
-                                    <div class="hdd-arm">
-                                        <div class="hdd-arm-vibe"></div>
-                                    </div>
-                                    <div class="hdd-arm-label">R/W HEAD</div>
+                                    <div class="hdd-glow"></div>
                                 </div>
-                                <div class="hdd-glow"></div>
+                                <div class="mt-3 text-center">
+                                    <h3 class="font-display text-sm font-extrabold text-[#3B3664]">Mechanical Drives</h3>
+                                    <p class="text-xs text-[#777777]">The bottleneck of older systems</p>
+                                </div>
                             </div>
-                            <div class="mt-3 text-center">
-                                <h3 class="font-display text-sm font-extrabold text-[#3B3664]">Mechanical Drives</h3>
-                                <p class="text-xs text-[#777777]">The bottleneck of older systems</p>
+                        </div>
+                        <!-- SSD Image -->
+                        <div class="relative group">
+                            <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-3 py-1 text-[10px] uppercase tracking-widest font-bold rounded-full text-white z-20 whitespace-nowrap" style="background-image: var(--gradient)">Modern NVMe SSD</div>
+                            <div class="relative z-10 glass p-4 rounded-2xl overflow-hidden">
+                                <img src="https://d2ol7oe51mr4n9.cloudfront.net/user_3DiuVqH1MERGMmc1VbVcypMLFRm/9215f2fc-cc15-4118-9c39-cd27ba7d5d95.png" alt="SSD Hardware Engineering" class="rounded-xl w-full h-full object-cover aspect-[4/3]">
+                                <div class="mt-3 text-center">
+                                    <h3 class="font-display text-sm font-extrabold text-[#3B3664]">NVMe Flash</h3>
+                                    <p class="text-xs text-[#777777]">Where modern speed lives</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- RAM Image -->
+                        <div class="relative group">
+                            <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-3 py-1 text-[10px] uppercase tracking-widest font-bold rounded-full text-white z-20 whitespace-nowrap" style="background-image: var(--gradient)">High-Speed RAM</div>
+                            <div class="relative z-10 glass p-4 rounded-2xl overflow-hidden">
+                                <img src="https://images.pexels.com/photos/2582928/pexels-photo-2582928.jpeg?auto=compress&cs=tinysrgb&w=800" alt="RAM Hardware Engineering" class="rounded-xl w-full h-full object-cover aspect-[4/3]">
+                                <div class="mt-3 text-center">
+                                    <h3 class="font-display text-sm font-extrabold text-[#3B3664]">Memory Modules</h3>
+                                    <p class="text-xs text-[#777777]">The headroom for demanding work</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- SSD Image -->
-                    <div class="relative group">
-                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-3 py-1 text-[10px] uppercase tracking-widest font-bold rounded-full text-white z-20 whitespace-nowrap" style="background-image: var(--gradient)">Modern NVMe SSD</div>
-                        <div class="relative z-10 glass p-4 rounded-2xl overflow-hidden">
-                            <img src="https://d2ol7oe51mr4n9.cloudfront.net/user_3DiuVqH1MERGMmc1VbVcypMLFRm/9215f2fc-cc15-4118-9c39-cd27ba7d5d95.png" alt="SSD Hardware Engineering" class="rounded-xl w-full h-full object-cover aspect-[4/3]">
-                            <div class="mt-3 text-center">
-                                <h3 class="font-display text-sm font-extrabold text-[#3B3664]">NVMe Flash</h3>
-                                <p class="text-xs text-[#777777]">Where modern speed lives</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- RAM Image -->
-                    <div class="relative group">
-                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-3 py-1 text-[10px] uppercase tracking-widest font-bold rounded-full text-white z-20 whitespace-nowrap" style="background-image: var(--gradient)">High-Speed RAM</div>
-                        <div class="relative z-10 glass p-4 rounded-2xl overflow-hidden">
-                            <img src="https://images.pexels.com/photos/2582928/pexels-photo-2582928.jpeg?auto=compress&cs=tinysrgb&w=800" alt="RAM Hardware Engineering" class="rounded-xl w-full h-full object-cover aspect-[4/3]">
-                            <div class="mt-3 text-center">
-                                <h3 class="font-display text-sm font-extrabold text-[#3B3664]">Memory Modules</h3>
-                                <p class="text-xs text-[#777777]">The headroom for demanding work</p>
-                            </div>
-                        </div>
+                    <div class="glass p-6 rounded-2xl">
+                        <p class="text-[#777777] leading-relaxed mb-4">
+                            We don't just swap parts; we optimize workflows. With years of experience in enterprise-level system architecture, MPC Consulting brings a surgical approach to personal and professional hardware and software consulting.
+                        </p>
+                        <p class="text-[#777777] leading-relaxed">
+                            Our commitment is simple: Maximum performance, absolute stability, and transparent pricing. We treat every system as a high-performance asset.
+                        </p>
                     </div>
                 </div>
-            </div>
-            <div class="reveal mt-12">
-                <div id="ssd-animation-container" class="w-full h-[350px] md:h-[480px] rounded-3xl overflow-hidden glass" style="border-color: rgba(232,4,126,0.2)">
-                </div>
-            </div>
-            <div class="reveal" style="transition-delay: 200ms">
-                <p class="text-[#777777] leading-relaxed mb-6 max-w-3xl mx-auto">
-                    We don't just swap parts; we optimize workflows. With years of experience in enterprise-level system architecture, MPC Consulting brings a surgical approach to personal and professional hardware and software consulting.
-                </p>
-                <p class="text-[#777777] leading-relaxed mb-8 max-w-3xl mx-auto">
-                    Our commitment is simple: Maximum performance, absolute stability, and transparent pricing. We treat every system as a high-performance asset.
-                </p>
-                <div class="flex justify-center gap-6">
-                    <div class="text-center">
-                        <div class="text-2xl font-extrabold text-[#3B3664] font-display">100%</div>
-                        <div class="text-xs text-slate-500 uppercase tracking-widest">Success Rate</div>
+                <div class="reveal">
+                    <div id="ssd-animation-container" class="w-full h-[350px] md:h-[480px] rounded-3xl overflow-hidden glass" style="border-color: rgba(232,4,126,0.2)">
                     </div>
-                    <div class="w-px h-10 bg-slate-200"></div>
-                    <div class="text-center">
-                        <div class="text-2xl font-extrabold text-[#3B3664] font-display">10x</div>
-                        <div class="text-xs text-slate-500 uppercase tracking-widest">Speed Boost</div>
+                    <div class="flex justify-center gap-6 mt-8">
+                        <div class="text-center">
+                            <div class="text-2xl font-extrabold text-[#3B3664] font-display">100%</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-widest">Success Rate</div>
+                        </div>
+                        <div class="w-px h-10 bg-slate-200"></div>
+                        <div class="text-center">
+                            <div class="text-2xl font-extrabold text-[#3B3664] font-display">10x</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-widest">Speed Boost</div>
+                        </div>
                     </div>
                 </div>
             </div>
